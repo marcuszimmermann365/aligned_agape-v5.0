@@ -1,0 +1,39 @@
+
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Agape V5 – Weltzustand</title>
+</head>
+<body>
+  <section id="world-panel">
+    <header>
+      <h2>Weltzustand</h2>
+      <div id="gws-badge" title="Global Wellbeing Score"></div>
+    </header>
+    <div id="j-radar"></div>
+    <table id="proxy-table">
+      <thead>
+        <tr>
+          <th>J</th><th>Proxy</th><th>Norm</th><th>Rohwert</th><th>as of</th><th>Quelle</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </section>
+  <style>
+    #proxy-table { width: 100%; border-collapse: collapse; }
+    #proxy-table th, #proxy-table td { border-bottom: 1px solid #eee; padding: 8px; }
+    .badge { display:inline-block; padding: 4px 8px; border-radius: 6px; background: #f3f3f3; font-size: 12px; }
+    .source-chip { display:inline-flex; gap:6px; align-items:center; }
+    .source-chip a { text-decoration: none; }
+    .tooltip { position: relative; cursor: help; border-bottom: 1px dotted #aaa; }
+    .tooltip:hover::after { content: attr(data-tip); position: absolute; left: 0; top: 120%;
+      white-space: pre-line; background: #111; color:#fff; padding:8px 10px; border-radius:6px; max-width: 360px; z-index: 5; }
+    .fresh { color: #2a7; } .stale { color: #c70; } .ancient { color: #c33; }
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; padding: 16px; }
+  </style>
+  <script type="module" src="/static/js/world_panel.js"></script>
+</body>
+</html>
